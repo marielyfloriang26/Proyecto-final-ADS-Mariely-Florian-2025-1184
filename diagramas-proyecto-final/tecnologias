@@ -1,0 +1,12 @@
+@startuml
+title 2.2 Tecnologías Elegidas para MediApp
+
+|+ Componente | Tecnología | Justificación |
+|---|---|---|
+| **Lenguaje Backend** | Java (Spring Boot) | Alto rendimiento y seguridad. Facilita la creación de APIs REST. |
+| **Base de Datos** | PostgreSQL | Fiabilidad, integridad de datos y soporte para modelos de datos complejos. |
+| **Framework Frontend** | React & TypeScript | Interfaz dinámica y tipado estático para mejor mantenibilidad. |
+| **Contenedores** | Docker / Kubernetes | Facilita la escalabilidad y el despliegue en entornos de nube. |
+| **Estándares** | iCalendar / REST API | Sincronización de agendas y fácil integración con otros sistemas. |
+
+@enduml

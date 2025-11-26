@@ -1,17 +1,17 @@
 @startuml
 title Arquitectura de Capas de MediApp (3-Tier)
 
-package "1. Capa de Presentación (Frontend)" {
+package "Capa de Presentacion (Frontend)" {
     [Web App] as FrontEnd
-    [App Móvil] as Mobile
+    [App Movil] as Mobile
 }
 
-package "2. Capa de Lógica de Negocio (Backend)" {
+package "Capa de Logica de Negocio (Backend)" {
     [Servicios API REST] as BackEnd
 }
 
-package "3. Capa de Datos (Persistencia)" {
-    [Módulo de Acceso a Datos] as DAO
+package "Capa de Datos (Persistencia)" {
+    [Modulo de Acceso a Datos] as DAO
     [Base de Datos PostgreSQL] as DB
 }
 
