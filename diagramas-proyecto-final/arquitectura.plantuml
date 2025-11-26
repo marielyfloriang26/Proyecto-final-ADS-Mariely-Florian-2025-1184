@@ -1,0 +1,28 @@
+@startuml
+title Arquitectura de Capas de MediApp (3-Tier)
+
+package "1. Capa de Presentación (Frontend)" {
+    [Web App] as FrontEnd
+    [App Móvil] as Mobile
+}
+
+package "2. Capa de Lógica de Negocio (Backend)" {
+    [Servicios API REST] as BackEnd
+}
+
+package "3. Capa de Datos (Persistencia)" {
+    [Módulo de Acceso a Datos] as DAO
+    [Base de Datos PostgreSQL] as DB
+}
+
+' Flujos de Comunicación
+FrontEnd --> BackEnd : Llama a Servicios
+Mobile --> BackEnd : Llama a Servicios
+
+BackEnd --> DAO : Solicita Datos
+DAO --> DB : CRUD Operaciones
+
+DB --> DAO : Retorna Datos
+DAO --> BackEnd : Retorna Resultados
+
+@enduml
